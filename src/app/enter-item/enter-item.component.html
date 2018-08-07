@@ -1,0 +1,17 @@
+<section *ngIf="theItem">
+
+    <h2>Place item up for auction:</h2>
+    <ul>
+        <li><label>Reserve Price:
+            <input [(ngModel)]="theItem.reservePrice" placeholder="0.00">
+        </label></li>
+        <li><label>Item ID:
+            <input [(ngModel)]="theItem.item.itemId" placeholder="item id">
+        </label></li>
+        <li><label>Description:
+            <input [(ngModel)]="theItem.item.description" placeholder="description">
+        </label></li>
+    </ul>
+    <button (click)="onButton()">Submit Item</button>
+
+</section>

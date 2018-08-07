@@ -1,0 +1,17 @@
+<section *ngIf="theBid">
+
+    <h2>Place bid:</h2>
+    <ul>
+        <li><label>Auction Item:
+            <input [(ngModel)]="theBid.auctionItemId" placeholder="item id">
+        </label></li>
+        <li><label>Max Auto-Bid Amount:
+            <input [(ngModel)]="theBid.maxAutoBidAmount" placeholder="0.00">
+        </label></li>
+        <li><label>Bidder:
+            <input [(ngModel)]="theBid.bidderName" placeholder="name">
+        </label></li>
+    </ul>
+    <button (click)="onButton()">Place Bid</button>
+
+</section>

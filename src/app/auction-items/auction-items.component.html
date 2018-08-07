@@ -1,0 +1,11 @@
+<h2>Auction Items</h2>
+<div *ngFor="let auctionItem of auctionItems">
+  <h4><span>{{ auctionItem.auctionItemId }}.</span>
+    {{ auctionItem.item.description }}
+    <span class="plain light">({{ auctionItem.item.itemId }})</span><br/>
+    <div class="details plain">
+      Reserve Price: {{ auctionItem.reservePrice | currency:'USD':'symbol-narrow':'.2-2' }}<br/>
+      Current Bid: {{ auctionItem.currentBid | currency:'USD':'symbol-narrow':'.2-2' }}</div>
+  </h4>
+</div>
+<button (click)="onButton()">Refresh</button>
